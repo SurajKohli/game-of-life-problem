@@ -1,7 +1,7 @@
 import numpy as np
 
 def fateOfCell(i,j,n):
-    neighAliveCount = 0
+    neighbourAliveCount = 0
     # limits for the value of neighbouring cells
     a = i-1 if i-1 >= 0 else i
     b = i+1 if i+1 < n else i
@@ -13,13 +13,13 @@ def fateOfCell(i,j,n):
             if ( x==i ) and ( y==j ):
                 pass
             elif ( Matrix[x][y] == '*' ):
-                neighAliveCount = neighAliveCount + 1
+                neighbourAliveCount = neighbourAliveCount + 1
 
-    if (( Matrix[i][j] == '0' ) and ( neighAliveCount == 3 )): # cell is dead
+    if (( Matrix[i][j] == '0' ) and ( neighbourAliveCount == 3 )): # cell is dead
         Matrix[i][j] = '*' # cell becomes alive
-    elif (( Matrix[i][j] == '*' ) and ( (neighAliveCount == 2) or (neighAliveCount == 3) )): # cell alive and neigh 2 or 3
+    elif (( Matrix[i][j] == '*' ) and ( (neighbourAliveCount == 2) or (neighbourAliveCount == 3) )): # cell alive and neigh 2 or 3
         pass # cell lives
-    elif (( Matrix[i][j] == '*' ) and ( (neighAliveCount < 2) or (neighAliveCount > 3) )): # cell alive and neigh < 2 or > 3
+    elif (( Matrix[i][j] == '*' ) and ( (neighbourAliveCount < 2) or (neighbourAliveCount > 3) )): # cell alive and neigh < 2 or > 3
         Matrix[i][j] = '0' # cell dies
     else:
         pass
@@ -42,23 +42,11 @@ def runGenerations(Matrix,g):
 
 if __name__ =='__main__':
     print("----- Welcome To The Game Of Life -----")
+    print("--INPUT--")
     # Orthogonal Matrix
     print("Please Enter Size of The Universe/Matrix/Grid: ")
     n = int(input())
     Matrix = [ [ '0' for i in range(n)] for i in range(n) ]
-    # Matrix[5][5] = '*'
-    # Matrix[5][6] = '*'
-    # Matrix[6][5] = '*'
-    # Matrix[6][6] = '*'
-    # Matrix[6][7] = '*'
-    # Matrix[5][8] = '*'
-    # Matrix[8][5] = '*'
-    # Matrix[6][8] = '*'
-    # Matrix[6][9] = '*'
-    # Matrix[2][2] = '*'
-    # Matrix[1][1] = '*'
-    # Matrix[1][0] = '*'
-    # Matrix[0][0] = '*'
     print("Please Enter the values in the Universe/Matrix where you want a cell to live (rest all cells would be empty/dead): ")
     print("Enter 'done' to start generation!")
     while(True):
@@ -74,6 +62,7 @@ if __name__ =='__main__':
     g = int(input())
 
     print("\n")
+    print("--OUTPUT--")
     print("---Initial Universe/seed system---")
     print(np.matrix(Matrix))
     print("\n")
