@@ -1,7 +1,6 @@
 import numpy as np
 
 def fateOfCell(i,j,n):
-    # print("i " + str(i) + " j " + str(j))
     neighAliveCount = 0
     # limits for the value of neighbouring cells
     a = i-1 if i-1 >= 0 else i
@@ -14,7 +13,6 @@ def fateOfCell(i,j,n):
             if ( x==i ) and ( y==j ):
                 pass
             elif ( Matrix[x][y] == '*' ):
-                # print("incrementing neighbour")
                 neighAliveCount = neighAliveCount + 1
 
     if (( Matrix[i][j] == '0' ) and ( neighAliveCount == 3 )): # cell is dead
@@ -34,9 +32,6 @@ def runSingleGeneration(Matrix):
         for j in range(n):
             fateOfCell(i,j,n)
 
-
-    # print(Matrix)
-    # print(np.matrix(Matrix))
 
 def runGenerations(Matrix,g):
     for x in range(g):
@@ -83,4 +78,3 @@ if __name__ =='__main__':
     print(np.matrix(Matrix))
     print("\n")
     runGenerations(Matrix,g)
-    # print(np.matrix(Matrix))
