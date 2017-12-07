@@ -10,8 +10,10 @@ and observing how it evolves.
 
 * For simplicity sake, the universe generation is started from cell (0,0) and goes till cell (n,n).
 * The user inputs the size of the universe and number of generations to run.
-* The user inputs the initial seed system/ genesis universe.
+* The user inputs the initial seed system/genesis universe.
 * Numpy library is used to pretty print the Matrix/universe.
+* A live cell is denoted by '*'
+* A dead cell is denoted by '0'
 
 ## Getting Started
 Run the code using ```python3 gameOfLife.py```
