@@ -22,6 +22,7 @@ Run the code using ```python3 gameOfLife.py```
 
 ```
 ----- Welcome To The Game Of Life -----
+--INPUT--
 Please Enter Size of The Universe/Matrix/Grid:
 10
 Please Enter the values in the Universe/Matrix where you want a cell to live (rest all cells would be empty/dead):
@@ -56,7 +57,7 @@ done
 Please Enter number of generations:
 100
 
-
+--OUTPUT--
 ---Initial Universe/seed system---
 [['0' '0' '0' '0' '0' '*' '0' '0' '0' '0']
  ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
@@ -84,6 +85,16 @@ Matrix After Generation 1:
 .
 .
 .
-continues till Generation 100
+Matrix After Generation 100:
+[['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '*' '*' '0' '0' '0']
+ ['0' '0' '0' '0' '*' '0' '*' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '*' '0' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']
+ ['0' '0' '0' '0' '0' '0' '0' '0' '0' '0']]
 ```
 
